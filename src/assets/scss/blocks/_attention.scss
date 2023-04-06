@@ -1,9 +1,6 @@
 .attention {
  padding: 100px 0 50px;
  text-align: center;
- // .attention__title
- &__title {
- }
  // .attention__items
  &__items {
   display: grid;
@@ -20,6 +17,7 @@
   text-align: center;
   position: relative;
   transition: all 0.7s;
+  cursor: pointer;
   &:hover {
    box-shadow: 0px 5px 10px rgba(53, 185, 132, 1);;
   }
