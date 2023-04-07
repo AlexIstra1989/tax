@@ -1,9 +1,58 @@
 .callback {
+ padding-bottom: 100px;
+ @media (max-width: 991px){
+  padding-bottom: 60px;
+ }
+ @media (max-width: 768px){
+  padding-bottom: 30px;
+ }
+ @media (max-width: 490px){
+  padding-bottom: 0px;
+ }
+ // .callback__inner
+ &__inner {
+  background-image: url("../images/callback/bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 100px 95px;
+  text-align: center;
+  @media (max-width: 991px) {
+   padding: 100px 60px;
+  }
+  @media (max-width: 768px) {
+   padding: 100px 40px;
+  }
+  @media (max-width: 490px) {
+   padding: 100px 20px;
+  }
+ }
  // .callback__title
  &__title {
+  span {
+   color: $accentColor;
+  }
  }
  // .callback__text
  &__text {
+  font-size: 22px;
+  line-height: 1.5;
+  margin: 0 auto 40px;
+  max-width: 648px;
+  width: 100%;
+  @media (max-width: 768px){
+   font-size: 18px;
+  }
+ }
+ // .callback__right
+ &__right {
+  font-weight: 700;
+  color: $secondaryColor;
+ }
+ // .callback__wrong
+ &__wrong {
+  font-weight: 700;
+  color: $accentColor;
  }
  // .callback__popup
  &__popup {
