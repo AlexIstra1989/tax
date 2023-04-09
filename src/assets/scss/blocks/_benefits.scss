@@ -1,0 +1,92 @@
+.benefits {
+ background-image: url("../images/benefits/bg.jpg");
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ padding-top: 100px; 
+ // .benefits__top
+ &__top {
+  color: $primaryColor;
+  text-align: center;
+ }
+ // .benefits__title
+ &__title {
+  max-width: 965px;
+  width: 100%;
+  margin: 0 auto 50px;
+  span {
+   padding: 0 5px;
+   background-color: $accentColor;
+  }
+ }
+ // .benefits__text
+ &__text {
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 408px;
+  width: 100%;
+  margin: 0 auto 60px;
+ }
+ // .benefits__box
+ &__box {
+  padding: 50px 40px;
+  background-color: $primaryColor;
+  text-align: center;
+ }
+ // .benefits__subtitle
+ &__subtitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+ }
+ // .benefits__items
+ &__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+ }
+ // .benefits__item
+ &__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 85px 20px 20px 20px;
+  min-height: 250px;
+  position: relative;
+  // .benefits__item_
+  &_first::before,
+  &_second::before,
+  &_third::before,
+  &_fourth::before,
+  &_fifth::before {
+   @include pseudo;
+   @include background(url("../images/benefits/item-1.svg"));
+   width: 64px;
+   height: 64px;
+   left: 50%;
+   top: 0;
+   transform: translateX(-50%);
+  }
+  &_second::before {
+   @include background(url("../images/benefits/item-2.svg"));
+  }
+  &_third::before {
+   @include background(url("../images/benefits/item-3.svg"));
+  }
+  &_fourth::before {
+   @include background(url("../images/benefits/item-4.svg"));
+  }
+  &_fifth::before {
+   @include background(url("../images/benefits/item-5.svg"));
+  }
+  @media (max-width: 768px) {
+   min-height: 200px;
+  }
+ }
+ // .benefits__more
+ &__more {
+  margin: auto auto 0;
+ }
+}
