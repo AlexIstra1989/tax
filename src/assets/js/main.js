@@ -23,3 +23,42 @@ if (window.innerWidth < 600) {
    slider.style.transform = `translateX(-${counter * slideWidth}px)`;
  });
 };
+
+//Slider countries
+new Swiper ('.countries__slider', {
+ slidesPerView: 1,
+ autoHeight: true,
+ spaceBetween: 0,
+ //loop: true,
+ //initialSlide: 1,
+
+ 
+ navigation: {
+  prevEl: '.swiper-button-prev',
+  nextEl: '.swiper-button-next',
+ },
+
+ // Брейкпоинты
+		
+			breakpoints: {
+    320: {
+					slidesPerView: 1,
+					spaceBetween: 10,
+					autoHeight: true,
+				},
+				490: {
+					slidesPerView: 1,
+					spaceBetween: 20,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 1,
+					spaceBetween: 20,
+				},
+				991: {
+					slidesPerView: 1,
+					spaceBetween: 30,
+				},
+			},
+			
+});
