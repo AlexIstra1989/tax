@@ -1,25 +1,37 @@
 .countries {
- padding-top: 100px;
+ padding: 100px 0;
  position: relative;
+ @media (max-width: 991px) {
+  padding-top: 0;
+ }
+ @media (max-width: 768px) {
+  padding-bottom: 40px;
+ }
+ // .countries__container 
+ &__container {
+  @media (max-width: 900px) {
+   padding: 0;
+  }
+ }
  // .countries__inner
  &__inner {
   display: flex;
   align-items: center;
+  @media (max-width: 900px) {
+   display: block;
+  }
  }
  // .countries__slider
  &__slider {
-  flex: 0 1 50%;
+  flex: 1 0 66%;
   margin-left: 0 !important;
-  //flex: 0 1 90.75%;
  }
- // .countries__wrapper
- &__wrapper {
- }
- // .countries__slide
- &__slide {
+ .swiper-pagination-bullet-active {
+  background-color: $accentColor;
  }
  // .countries__item
  &__item {
+  min-height: 747px;
   padding: 89px 150px 72px 50px;
   &_ny {
    @include background(url("../images/benefits/usa.jpg"));
@@ -33,6 +45,22 @@
   &_switz {
    @include background(url("../images/benefits/switzerland.jpg"));
   }
+  &_uk {
+   @include background(url("../images/benefits/uk.jpg"));
+  }
+  &_rom {
+   @include background(url("../images/benefits/romania.jpg"));
+  }
+  @media (max-width: 900px) {
+   padding: 70px 100px 50px 50px;
+  }
+  @media (max-width: 768px) {
+   padding: 50px;
+  }
+  @media (max-width: 470px) {
+   min-height: 850px;
+   padding: 50px 25px;
+  }
  }
  // .countries__item-name
  &__item-name {
@@ -43,6 +71,10 @@
   max-width: 429px;
   width: 100%;
   margin-bottom: 30px;
+  @media (max-width: 768px){
+   font-size: 32px; 
+   margin-bottom: 15px;
+  }
  }
  // .countries__item-text
  &__item-text {
@@ -50,6 +82,10 @@
   flex-direction: column;
   gap: 20px;
   margin-bottom: 30px;
+  @media (max-width: 768px) {
+   font-size: 16px;
+   margin-bottom: 10px;
+  }
  }
  // .countries__schedule
  &__schedule {
@@ -64,6 +100,10 @@
   a {
    color: $mainColor;
   }
+  @media (max-width: 768px) {
+   font-size: 16px;
+   margin-bottom: 20px;
+  }
  }
  // .countries__link
  &__link {
@@ -75,20 +115,17 @@
    color: $mainColor;
   }
  }
- // .countries__warning
- &__warning {
- }
 }
+//===========================================================================
 .warning {
+ flex: 1 0 40%;
+ margin-left: -60px;
  &__inner {
   display: flex;
   flex-direction: column;
   gap: 20px;
   background-color: $primaryColor;
-  // max-width: 480px;
-  // width: 100%;
   z-index: 999;
-  margin-left: -38px;
   position: relative;
   font-weight: 700;
   font-family: 'Bebas Neue', sans-serif;
@@ -96,7 +133,6 @@
   line-height: 1.2;
   padding: 124px 38px 20px 50px;
   box-shadow: 0px 10px 40px rgba(133, 133, 133, 0.4);
-  //position: relative;
   &::before {
    @include pseudo;
    @include background(url("../images/icons/info.svg"));
@@ -108,7 +144,11 @@
   span {
    color: $secondaryColor;
   }
-  
+  @media (max-width: 768px) {
+   font-size: 24px;
+  }
  }
-
+ @media (max-width: 900px) {
+  margin-left: 0;
+ }
 }

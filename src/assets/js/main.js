@@ -29,36 +29,20 @@ new Swiper ('.countries__slider', {
  slidesPerView: 1,
  autoHeight: true,
  spaceBetween: 0,
- //loop: true,
- //initialSlide: 1,
-
+ loop: true,
  
- navigation: {
-  prevEl: '.swiper-button-prev',
-  nextEl: '.swiper-button-next',
+ pagination: {
+  el: '.swiper-pagination',
+  clickable: true,
  },
 
- // Брейкпоинты
-		
-			breakpoints: {
-    320: {
-					slidesPerView: 1,
-					spaceBetween: 10,
-					autoHeight: true,
-				},
-				490: {
-					slidesPerView: 1,
-					spaceBetween: 20,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 1,
-					spaceBetween: 20,
-				},
-				991: {
-					slidesPerView: 1,
-					spaceBetween: 30,
-				},
-			},
-			
+	// Эффекты
+ effect: 'fade',
+ fadeEffect: {
+  crossFade: true
+ },
+ autoplay: {
+  delay: 4000,
+  disableOnInteraction: false,
+ },
 });
