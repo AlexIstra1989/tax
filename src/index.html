@@ -397,34 +397,48 @@
       <div class="stats__content">
        <h2 class="stats__title title">An example of how much tax<br><span>you can save</span></h2>
        <p class="stats__text">
-        Imagine you would significantly reduce your tax burden and thus achieve a much faster wealth accumulation, so that you
-        can live solely on dividends. The table below shows the difference between a permanent tax burden on assets compared to
+        Imagine you would significantly reduce your tax burden and thus achieve a much faster wealth accumulation, so that
+        you
+        can live solely on dividends. The table below shows the difference between a permanent tax burden on assets
+        compared to
         a holding model with a one-time burden at the time of distribution.
        </p>
        <div class="stats__example">
         The following example is based on an annual profit of <span>EUR 100,000</span>
        </div>
       </div>
-      <div class="stats__image">
-       <img src="assets/images/stats/stats.png" alt="stats">
+      <div class="stats__schematic schematic">
+       <h6 class="schematic__title">Wealth accumulation with and without tax comparison</h6>
+       <div class="schematic__image">
+        <img src="assets/images/stats/stats.png" alt="stats">
+       </div>
+       <div class="schematic__types">
+        <span class="schematic__person">Natural Person</span>
+        <span class="schematic__holding">Holding-Model</span>
+       </div>
+       <p class="schematic__result">You save 800.000 EUR in 10 years</p>
       </div>
      </div>
      <div class="stats__calculator calculator">
       <div class="calculator__inner">
        <h3 class="calculator__title">Calculate the tax you save</h3>
-       <div class="calculator__box">
+       <div class="calculator__scale">
+        <div class="calculator__scale-top">
          <label class="calculator__label" for="profit-slider">Annual profit:</label>
-         <input class="calculator profit-slider" id="profit-slider" type="range" min="50000" max="1000000" value="50000">
-         <output class="calculator__profit" id="profit-value" for="profit-slider">EUR 50,000</output>
-       </div>
-      <output class="calculator__saved" for="profit-slider" id="savings-value">EUR 500,000</output>
+         <input class="calculator__profit-slider profit-slider" id="profit-slider" type="range" min="50000" max="1000000" value="50000">
+         <output class="calculator__profit" id="profit-value" for="profit-slider">50,000</output>
+        </div>
+        <div class="calculator__scale-bottom">
+         <span>Amount you saved after 10 years:</span>
+         <output class="calculator__saved" for="profit-slider" id="savings-value">500,000</output>
+        </div>
        </div>
       </div>
-      <div class="stats__bottom">
-       <img src="assets/images/logo/calendly.png" alt="calendly logo">
-       <span class="stats__callback-text">Book a free call on the Calendly:</span>
-       <a id="openPopup" class="countries__link btn" href="#">book a call</a>
-      </div>
+     </div>
+     <div class="stats__bottom">
+      <img src="assets/images/logo/calendly.png" alt="calendly logo">
+      <span class="stats__callback-text">Book a free call on the Calendly:</span>
+      <a id="openPopup" class="countries__link btn" href="#">book a call</a>
      </div>
     </div>
    </section>

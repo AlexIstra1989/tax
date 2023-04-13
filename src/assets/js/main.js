@@ -48,21 +48,13 @@ new Swiper ('.countries__slider', {
 });
 
 //Scale
-// const slider = document.getElementById("profit-slider");
-// const output = document.getElementById("profit-value");
-// output.textContent = "EUR " + slider.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-// slider.oninput = function() {
-//   output.textContent = "EUR " + this.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-// }
 const slider = document.getElementById("profit-slider");
 const output = document.getElementById("profit-value");
 const savingsOutput = document.getElementById("savings-value");
 const years = 10;
-output.textContent = "EUR " + slider.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-savingsOutput.textContent = "EUR " + (slider.value * years).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+output.textContent =  slider.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+savingsOutput.textContent =  (slider.value * years).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 slider.oninput = function() {
-  output.textContent = "EUR " + this.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  savingsOutput.textContent = "EUR " + (this.value * years).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  output.textContent = this.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  savingsOutput.textContent = (this.value * years).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-
-
