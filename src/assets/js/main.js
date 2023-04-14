@@ -47,6 +47,32 @@ new Swiper ('.countries__slider', {
  },
 });
 
+//Slider reviews
+new Swiper ('.reviews__slider', {
+ slidesPerView: 1,
+ autoHeight: true,
+ spaceBetween: 0,
+ loop: true,
+ 
+ pagination: {
+  el: '.swiper-pagination',
+  clickable: true,
+ },
+});
+
+//Slider content-reviews
+new Swiper ('.content-reviews__slider', {
+ slidesPerView: 1,
+ autoHeight: true,
+ spaceBetween: 0,
+ loop: true,
+ 
+ pagination: {
+  el: '.swiper-pagination',
+  clickable: true,
+ },
+});
+
 //Scale
 const slider = document.getElementById("profit-slider");
 const output = document.getElementById("profit-value");
