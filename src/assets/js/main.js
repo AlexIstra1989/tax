@@ -51,21 +51,19 @@ new Swiper ('.countries__slider', {
 new Swiper ('.reviews__slider', {
  slidesPerView: 1,
  autoHeight: true,
- spaceBetween: 0,
- loop: true,
+ spaceBetween: 10,
+ //loop: true,
  
- pagination: {
-  el: '.swiper-pagination',
-  clickable: true,
+ navigation: {
+  prevEl: '.button-prev',
+  nextEl: '.button-next',
  },
 });
 
 //Slider content-reviews
 new Swiper ('.content-reviews__slider', {
  slidesPerView: 1,
- autoHeight: true,
- spaceBetween: 0,
- loop: true,
+ spaceBetween: 10,
  
  pagination: {
   el: '.swiper-pagination',
@@ -84,3 +82,5 @@ slider.oninput = function() {
   output.textContent = this.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   savingsOutput.textContent = (this.value * years).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+

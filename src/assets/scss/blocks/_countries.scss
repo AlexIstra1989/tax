@@ -26,6 +26,10 @@
   flex: 1 0 66%;
   margin-left: 0 !important;
  }
+ .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+ }
  .swiper-pagination-bullet-active {
   background-color: $accentColor;
  }

@@ -88,3 +88,49 @@ body {
  opacity: 1;
  transform: translate(0px, 0px);
 }
+
+.buttons {
+ display: flex;
+ justify-content: space-between;
+ width: 110px;
+ align-items: center;
+ position: absolute;
+ top: 0;
+ right: 10px; 
+ @media (max-width: 490px) {
+  width: 90px;
+ }
+}
+
+.button-prev,
+.button-next {
+ width: 50px;
+ height: 50px;
+ background-color: #858585;
+ display: block;  
+ cursor: pointer;
+ position: relative;
+ &.swiper-button-disabled {
+  background-color: $accentColor;
+ }
+ @media (max-width: 490px) {
+  width: 40px;
+  height: 40px;
+ }
+}
+
+.button-prev::before,
+.button-next::before {
+ @include pseudo;
+ width: 16px;
+ height: 16px;
+ @include background(url("../images/icons/arrow-swiper.svg"));
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.button-next::before {
+ @include background(url("../images/icons/arrow-swiper.svg"));
+ transform: translate(-50%, -50%) rotate(0deg);
+}
