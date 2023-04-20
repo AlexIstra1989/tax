@@ -1,0 +1,78 @@
+.consultation {
+ padding-bottom: 100px;
+ @media (max-width: 768px) {
+  padding-bottom: 40px;
+ }
+ // .consultation__inner
+ &__inner {
+  background-color: $accentColor;
+  color: $primaryColor;
+  padding: 50px;
+  position: relative;
+  &::after {
+   @include pseudo;
+   background-image: url("../images/icons/consult.png");
+   width: 247px;
+   height: 247px;
+   right: 0;
+   top: 0;
+  }
+ }
+ // .consultation__title
+ &__title {
+  font-weight: 700;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  z-index: 99999;
+  position: relative;
+ }
+ // .consultation__text
+ &__text {
+  max-width: 631px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 999;
+  p:last-child {
+   color: $mainColor;
+  }
+ }
+ // .consultation__bottom
+ &__bottom {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  @media (max-width: 490px) {
+   flex-direction: column;
+   gap: 10px;
+  }
+ }
+  // .consultation__link
+  &__link {
+   background-color: $mainColor;
+   &:hover {
+    color: $mainColor;
+    border-color: $mainColor;
+   }
+  }
+ // .consultation__coast
+ &__coast {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.3;
+  position: relative;
+  &::before {
+   @include pseudo;
+   background-image: url("../images/icons/money.svg");
+   width: 22px;
+   height: 22px;
+   left: -28%;
+   top: -15%;
+  }
+ }
+}
