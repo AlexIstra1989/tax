@@ -1,0 +1,80 @@
+.advantages {
+ padding-bottom: 100px;
+ @media (max-width: 768px) {
+  padding-bottom: 40px;
+ }
+ // .advantages__container 
+ &__container {
+  padding: 0;
+ }
+ // .advantages__title
+ &__title {
+  text-align: center;
+  span {
+   color: $accentColor;
+  }
+  @media (max-width: 490px) {
+   margin-bottom: 0;
+  }
+ }
+ // .advantages__items
+ &__items {
+  display: flex;
+  gap: 20px;
+  background-image: url("../images/advantages-bg737.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding: 108px 40px 70px 60px;
+  @media (max-width: 991px) {
+   padding: 108px 30px 70px 30px;
+  }
+  @media (max-width: 768px) {
+   flex-direction: column;
+  }
+  @media (max-width: 991px) {
+   padding: 80px 20px 30px 20px;
+  }
+ }
+ // .advantages__list
+ &__list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 530px;
+  width: 100%;
+  @media (max-width: 768px) {
+   max-width: 100%;
+  }
+ }
+ // .advantages__item
+ &__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  span {
+   max-width: 64px;
+   width: 100%;
+   height: 64px;
+   background-color: $primaryColor; 
+   position: relative;
+   &::before {
+    @include pseudo;
+    background-image: url("../images/icons/ok-green.svg");
+    width: 28px;
+    height: 21px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+   }
+   @media (max-width: 991px) {
+    max-width: 50px;
+    height: 50px;
+   }
+  }
+  @media (max-width: 768px) {
+   font-size: 14px;
+   gap: 10px;
+  }
+ }
+}
