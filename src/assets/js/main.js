@@ -83,4 +83,24 @@ slider.oninput = function() {
   savingsOutput.textContent = (this.value * years).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
+//Accordion
+// var accordionHeaders = document.querySelectorAll('.accordion__header');
+
+// accordionHeaders.forEach(function(header) {
+//   header.addEventListener('click', function() {
+//     this.classList.toggle('active');
+//     var accordionContent = this.nextElementSibling;
+//     accordionContent.classList.toggle('active');
+//   });
+// });
+
+var accordionHeaders = document.querySelectorAll('.accordion__top');
+
+accordionHeaders.forEach(function(header) {
+  header.addEventListener('click', function() {
+    this.classList.toggle('active');
+    var accordionContent = this.nextElementSibling;
+    accordionContent.classList.toggle('active');
+  });
+});
 

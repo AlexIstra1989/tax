@@ -1,0 +1,130 @@
+.questions {
+ background-color: $mainColor; 
+ // .questions__inner 
+ &__inner {
+  padding: 100px 0 80px;
+  @media (max-width: 768px) {
+   padding: 50px 0;
+  }
+ }
+ // .questions__title
+ &__title {
+  text-align: center;
+  color: $primaryColor;
+ }
+ // .questions__contact
+ &__contact {
+  text-align: center;
+ }
+ // .questions__contact-title
+ &__contact-title {
+  font-size: 20px;
+  color: $accentColor;
+  margin-bottom: 30px;
+ }
+ // .questions__links
+ &__links {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  color: $primaryColor;
+  @media (max-width: 490px) {
+   flex-direction: column;
+   gap: 20px;
+  }
+ }
+ // .questions__phone
+ &__phone {
+  span {
+   font-size: 15px;
+   color: #858585;
+   margin-right: 10px;
+  }
+ }
+ // .questions__email
+ &__email {
+  span {
+   font-size: 15px;
+   color: #858585;
+   margin-right: 10px;
+  }
+ }
+}
+//====================================================================
+.accordion {
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+ margin-bottom: 70px;
+ @media (max-width: 768px) {
+  margin-bottom: 35px;
+ }
+ // .accordion__top
+ &__top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 700;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  line-height: 1.2;
+  color: #858585;
+  padding: 30px 90px 22px 20px;
+  background-color: $primaryColor;
+  cursor: pointer;
+  &.active {
+   color: $primaryColor;
+   background-color: $accentColor; 
+   border-bottom: 1px solid $mainColor;
+   span {
+    background-color: $primaryColor;
+    &:before {
+     background-image: url("../images/icons/minus.svg");
+     height: 4px;
+     }
+    }
+   }
+ span {
+  display: block;
+  max-width: 50px;
+  width: 100%;
+  height: 50px;
+  background-color: #858585;
+  position: relative; 
+  &::before {
+   @include pseudo;
+   background-image: url("../images/icons/plus.svg");
+   width: 24px;
+   height: 24px;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   }
+  }
+  @media (max-width: 991px) {
+   font-size: 28px;
+  }
+  @media (max-width: 768px) {
+   font-size: 24px;
+   padding: 15px;
+  }
+  @media (max-width: 490px) {
+   font-size: 20px;
+  }
+ }
+ // .accordion__content
+ &__content {
+  font-size: 20px;
+  color: $primaryColor;
+  padding: 30px 90px;
+  display: none;
+  &.active {
+   display: block;
+   background-color: $accentColor;
+  }
+  @media (max-width: 768px) {
+   font-size: 14px;
+   padding: 10px 70px;
+  }
+ }
+}
