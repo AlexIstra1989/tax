@@ -71,6 +71,38 @@ new Swiper ('.content-reviews__slider', {
  },
 });
 
+//Slider team
+new Swiper ('.team__slider', {
+ slidesPerView: 3,
+ autoHeight: true,
+ spaceBetween: 20,
+ loop: true,
+ 
+ navigation: {
+  prevEl: '.team__button-prev',
+  nextEl: '.team__button-next',
+ },
+ pagination: {
+  el: '.swiper-pagination',
+  clickable: true,
+ },
+ // Брейкпоинты
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+				},
+				550: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+			},
+});
+
 //Scale
 const slider = document.getElementById("profit-slider");
 const output = document.getElementById("profit-value");
