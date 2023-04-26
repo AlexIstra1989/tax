@@ -1,0 +1,26 @@
+.regulations {
+ padding: 100px 0;
+ @media (max-width: 768px) {
+  padding: 40px 0;
+ }  
+ // .regulations__title
+ &__title {
+  font-weight: 700;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 50px;
+  color: #858585;
+  text-align: center;
+ }
+ // .regulations__items
+ &__items {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+ }
+ // .regulations__item
+ &__item {
+ }
+}
