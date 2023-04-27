@@ -15,12 +15,19 @@
  }
  // .regulations__items
  &__items {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   align-items: center;
+  justify-content: center;
   gap: 60px;
-  flex-wrap: wrap;
+  @media (max-width: 500px) {
+   grid-template-columns: repeat(auto-fit, minmax(65px, 1fr));
+  }
  }
  // .regulations__item
  &__item {
+  img {
+   width: 100%;
+  }
  }
 }
