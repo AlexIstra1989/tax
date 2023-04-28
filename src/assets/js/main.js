@@ -126,3 +126,33 @@ accordionHeaders.forEach(function(header) {
   });
 });
 
+//Popup
+var myPopup = document.getElementById("myPopup");
+var close = document.getElementsByClassName("popup__close")[0];
+var buttons = document.getElementsByClassName("popup__button");
+
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].onclick = function() {
+    myPopup.style.display = "block";
+  }
+}
+
+close.onclick = function() {
+  myPopup.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == myPopup) {
+    myPopup.style.display = "none";
+  }
+}
+
+var form = document.getElementById("myForm");
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var comment = document.getElementById("comment").value;
+  // здесь можно обработать данные из формы
+  myPopup.style.display = "none";
+});
